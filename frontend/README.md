@@ -1,2 +1,0 @@
-# pensor
-prosjektbeskrivelse
