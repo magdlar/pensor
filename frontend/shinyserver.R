@@ -24,7 +24,10 @@ library(tidyverse)
 ui <- navbarPage("Pensor",
   navbarMenu("=",
              tabPanel("Home",
-                      verbatimTextOutput("txtout")
+                        textInput("search", NULL),
+                        verbatimTextOutput("search")
+
+
                       ),
             tabPanel("Upload",
                      fileInput("file", "Last opp pensum",
@@ -37,9 +40,20 @@ ui <- navbarPage("Pensor",
             )
   )
 server <- function(input, output) {
-  output$txtout <- renderText({
-    "just some text"
+  
+  # Mulig måte å fake søking på?
+  output$search <- renderText({
+    if(input$search == ""){
+    }else if(input$search != "STV4214B"){
+      paste(input$search, "...")
+    }else if(input$search == "STV4214B"){
+      "> STV4214B"
+    }
   })
 }
 
 shinyApp(ui, server)
+
+#STV4214B
+#PCOS4022
+#PSY2503
