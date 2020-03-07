@@ -1,3 +1,9 @@
+#load("./backend/STV4214B.rda")
+library(quanteda)
+library(tidytext)
+library(wordcloud)
+
+STV4214B <- readRDS("C:/Users/Magnus/Documents/Programmer/pensor/frontend/www/STV421B.rds")
 
 #### Wordcloud ####
 
@@ -12,6 +18,16 @@ eksamen <- STV4214B %>%
   unnest_tokens(word, text) %>%
   anti_join(stoppord, by = "word") %>%
   count(word, sort = TRUE)
+
+#pal <- brewer.pal(8,"Dark2")
+
+output$wordplot <- renderPlot({
+  eksamen %>% 
+    with(wordcloud(word, n, 
+                   random.order = FALSE, 
+                   max.words = 200, 
+                   colors=brewer.pal(8,"Dark2")))
+})
 
 pal <- brewer.pal(8,"Dark2")
 

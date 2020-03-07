@@ -1,5 +1,5 @@
 body {
-  background-color: #10c799;
+  background-color: #F07E48;
 }
 
 #spilltekst {
@@ -11,5 +11,51 @@ body {
 }
 
 h2 {
-  text-align: center;
+  font-weight: bold;
+  color: #FFFFFF;
 }
+
+#spilltekst {
+  font-size: 15px;
+}
+
+#eks1 {
+  text-align: left;
+}
+
+#opp1 {
+  text-align: left;
+}
+
+.control-label {
+  color: #FFFFFF;
+}
+.container-fluidaaaa {
+/*  background-color: #E9945E;*/
+background-color: #F7882F;
+  padding-bottom: 15px;
+}
+
+.navbar-header {
+  padding-bottom: 10px;
+}
+
+.navbar-brand div {
+  color: #000000;
+  font-size: 30px;
+}
+
+.navbar.navbar-default.navbar-static-top {
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+}
+/*
+.shiny-split-layout {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.col-sm-12 {
+  margin-top: 15px;
+}
+*/
