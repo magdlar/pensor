@@ -1,0 +1,15 @@
+body {
+  background-color: #10c799;
+}
+
+#spilltekst {
+  padding: 15px;
+  background-color: #FFFFFF;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  min-height: 200px;
+}
+
+h2 {
+  text-align: center;
+}
